@@ -1,6 +1,6 @@
 //Maya ASCII 2022 scene
 //Name: Knight 2 anim.ma
-//Last modified: Wed, Dec 15, 2021 04:12:08 AM
+//Last modified: Wed, Dec 15, 2021 10:51:42 AM
 //Codeset: 1252
 file -rdi 1 -ns "Knight_2" -rfn "Knight_2RN" -op "v=0;" -typ "mayaAscii" "D:/Git Repos/Principles-of-Animation-1/FinalAnimation/scenes/assets/001_Rigged and weighted/Knight 2.ma";
 file -r -ns "Knight_2" -dr 1 -rfn "Knight_2RN" -op "v=0;" -typ "mayaAscii" "D:/Git Repos/Principles-of-Animation-1/FinalAnimation/scenes/assets/001_Rigged and weighted/Knight 2.ma";
@@ -12,7 +12,7 @@ fileInfo "product" "Maya 2022";
 fileInfo "version" "2022";
 fileInfo "cutIdentifier" "202106180615-26a94e7f8c";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19043)";
-fileInfo "UUID" "8D93EAF2-47F0-2F68-5309-648D8C208565";
+fileInfo "UUID" "2574792C-4030-1B7D-F171-AAB4CBE7A0C2";
 createNode transform -s -n "persp";
 	rename -uid "EB9DCE1E-4800-D822-4671-3781242F95A0";
 	setAttr ".v" no;
@@ -49,13 +49,13 @@ createNode camera -s -n "topShape" -p "top";
 createNode transform -s -n "front";
 	rename -uid "8D73BB7F-4475-5107-40E9-89880B36BBA7";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.051248400887929257 -0.96927625066994527 1000.139533718648 ;
+	setAttr ".t" -type "double3" -0.0050608090247474813 -1.0051444189887064 1000.139533718648 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "BF3E9578-4228-488B-90D1-CE8CBA1E023E";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.139533718648;
-	setAttr ".ow" 37.956796602595404;
+	setAttr ".ow" 36.466698739759629;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -81,6 +81,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "right_ground_ref";
 	rename -uid "84EB6543-4612-C796-86F0-C8A742B24AB5";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" -0.37432846098305189 -9.543839538354165 0 ;
 	setAttr ".s" -type "double3" 23.158023986319147 0.15555558388598953 1 ;
 createNode mesh -n "right_ground_refShape" -p "right_ground_ref";
@@ -97,6 +98,7 @@ createNode mesh -n "right_ground_refShape" -p "right_ground_ref";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "left_ground_ref";
 	rename -uid "A658F974-4BD2-0A7B-59EA-08BF70671400";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0.66390330815862009 -9.3531439072873273 -0.37829982642777549 ;
 	setAttr ".s" -type "double3" 21.825925263181336 0.15555558388598953 1 ;
 createNode mesh -n "left_ground_refShape" -p "left_ground_ref";
@@ -135,19 +137,19 @@ createNode mesh -n "left_ground_refShape" -p "left_ground_ref";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "9D9401E6-4204-4620-F93C-29A1B7133D1F";
-	setAttr -s 6 ".lnk";
-	setAttr -s 6 ".slnk";
+	rename -uid "2E7D6194-4EF9-EE3C-2914-158CF261BB4A";
+	setAttr -s 4 ".lnk";
+	setAttr -s 4 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "5191D78D-42EA-02ED-0DCC-85AA4D838778";
+	rename -uid "E99B8EC1-464F-B7F9-1CD7-0395B5B1016A";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "1AB751AB-4D74-F64C-F7B2-17820DF62F4B";
+	rename -uid "20B6A2E0-44CF-B4A4-9134-8DA81C601214";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "AE43C693-41ED-9582-4156-108EF40ED0AA";
+	rename -uid "E3923D93-43C5-2E3B-CA29-2BB7B3E36407";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "F25E974B-496F-6B53-1633-8EA28AAA51A9";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "79EB208B-4C10-C0E6-8946-11B4BA0456D4";
+	rename -uid "6CE9E7C4-42F9-EE1F-94E5-DF9BB1B2DA96";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "B8303A4D-442F-BE25-2B9F-D7800EEBD1A9";
 	setAttr ".g" yes;
@@ -815,7 +817,7 @@ createNode reference -n "Knight_2RN";
 		""
 		5 3 "Knight_2RN" "Knight_2:skinCluster56.message" "Knight_2RN.placeHolderList[3036]" 
 		""
-		"Knight_2RN" 660
+		"Knight_2RN" 659
 		1 |Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:spine_1|Knight_2:spine_2|Knight_2:spine_3|Knight_2:spine_4|Knight_2:neck_base|Knight_2:right_shoulder_pauldron_1|Knight_2:right_elbow|Knight_2:effector4 
 		"blendRightwrist" "blendRightwrist" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
 		
@@ -854,8 +856,6 @@ createNode reference -n "Knight_2RN";
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:spine_1|Knight_2:spine_2|Knight_2:spine_3|Knight_2:spine_4|Knight_2:neck_base|Knight_2:right_shoulder_pauldron_1|Knight_2:right_pauldron_2|Knight_2:right_pauldron_3" 
 		"scale" " -type \"double3\" 1 1 1"
-		2 "|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:spine_1|Knight_2:spine_2|Knight_2:spine_3|Knight_2:spine_4|Knight_2:neck_base|Knight_2:left_shoulder_pauldron_1|Knight_2:left_elbow|Knight_2:left_wrist|Knight_2:left_hand" 
-		"HandSwitch" " -k 1"
 		2 "|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:spine_1|Knight_2:spine_2|Knight_2:spine_3|Knight_2:spine_4|Knight_2:neck_base|Knight_2:left_shoulder_pauldron_1|Knight_2:left_elbow|Knight_2:left_wrist|Knight_2:left_hand|Knight_2:left_fingers_mid" 
 		"visibility" " 0"
 		2 "|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:spine_1|Knight_2:spine_2|Knight_2:spine_3|Knight_2:spine_4|Knight_2:neck_base|Knight_2:left_shoulder_pauldron_1|Knight_2:left_elbow|Knight_2:left_wrist|Knight_2:left_hand|Knight_2:left_fingers_mid|Knight_2:left_fingers_tip" 
@@ -935,14 +935,14 @@ createNode reference -n "Knight_2RN";
 		3 "|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:spine_1|Knight_2:spine_2|Knight_2:spine_3|Knight_2:spine_4|Knight_2:neck_base|Knight_2:left_shoulder_pauldron_1|Knight_2:left_elbow|Knight_2:left_wrist.translateZ" 
 		"|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:spine_1|Knight_2:spine_2|Knight_2:spine_3|Knight_2:spine_4|Knight_2:neck_base|Knight_2:left_shoulder_pauldron_1|Knight_2:left_elbow|Knight_2:effector3.translateZ" 
 		""
-		3 "|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:left_hip|Knight_2:left_knee|Knight_2:left_ankle.translateX" 
-		"|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:left_hip|Knight_2:left_knee|Knight_2:effector2.translateX" 
+		3 "|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:spine_1|Knight_2:spine_2|Knight_2:spine_3|Knight_2:spine_4|Knight_2:neck_base|Knight_2:right_shoulder_pauldron_1|Knight_2:right_elbow|Knight_2:right_wrist.translateX" 
+		"|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:spine_1|Knight_2:spine_2|Knight_2:spine_3|Knight_2:spine_4|Knight_2:neck_base|Knight_2:right_shoulder_pauldron_1|Knight_2:right_elbow|Knight_2:effector4.translateX" 
 		""
-		3 "|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:left_hip|Knight_2:left_knee|Knight_2:left_ankle.translateY" 
-		"|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:left_hip|Knight_2:left_knee|Knight_2:effector2.translateY" 
+		3 "|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:spine_1|Knight_2:spine_2|Knight_2:spine_3|Knight_2:spine_4|Knight_2:neck_base|Knight_2:right_shoulder_pauldron_1|Knight_2:right_elbow|Knight_2:right_wrist.translateY" 
+		"|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:spine_1|Knight_2:spine_2|Knight_2:spine_3|Knight_2:spine_4|Knight_2:neck_base|Knight_2:right_shoulder_pauldron_1|Knight_2:right_elbow|Knight_2:effector4.translateY" 
 		""
-		3 "|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:left_hip|Knight_2:left_knee|Knight_2:left_ankle.translateZ" 
-		"|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:left_hip|Knight_2:left_knee|Knight_2:effector2.translateZ" 
+		3 "|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:spine_1|Knight_2:spine_2|Knight_2:spine_3|Knight_2:spine_4|Knight_2:neck_base|Knight_2:right_shoulder_pauldron_1|Knight_2:right_elbow|Knight_2:right_wrist.translateZ" 
+		"|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:spine_1|Knight_2:spine_2|Knight_2:spine_3|Knight_2:spine_4|Knight_2:neck_base|Knight_2:right_shoulder_pauldron_1|Knight_2:right_elbow|Knight_2:effector4.translateZ" 
 		""
 		3 "|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:right_hip|Knight_2:right_knee|Knight_2:right_shin.translateX" 
 		"|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:right_hip|Knight_2:right_knee|Knight_2:effector1.translateX" 
@@ -953,14 +953,14 @@ createNode reference -n "Knight_2RN";
 		3 "|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:right_hip|Knight_2:right_knee|Knight_2:right_shin.translateZ" 
 		"|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:right_hip|Knight_2:right_knee|Knight_2:effector1.translateZ" 
 		""
-		3 "|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:spine_1|Knight_2:spine_2|Knight_2:spine_3|Knight_2:spine_4|Knight_2:neck_base|Knight_2:right_shoulder_pauldron_1|Knight_2:right_elbow|Knight_2:right_wrist.translateX" 
-		"|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:spine_1|Knight_2:spine_2|Knight_2:spine_3|Knight_2:spine_4|Knight_2:neck_base|Knight_2:right_shoulder_pauldron_1|Knight_2:right_elbow|Knight_2:effector4.translateX" 
+		3 "|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:left_hip|Knight_2:left_knee|Knight_2:left_ankle.translateX" 
+		"|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:left_hip|Knight_2:left_knee|Knight_2:effector2.translateX" 
 		""
-		3 "|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:spine_1|Knight_2:spine_2|Knight_2:spine_3|Knight_2:spine_4|Knight_2:neck_base|Knight_2:right_shoulder_pauldron_1|Knight_2:right_elbow|Knight_2:right_wrist.translateY" 
-		"|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:spine_1|Knight_2:spine_2|Knight_2:spine_3|Knight_2:spine_4|Knight_2:neck_base|Knight_2:right_shoulder_pauldron_1|Knight_2:right_elbow|Knight_2:effector4.translateY" 
+		3 "|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:left_hip|Knight_2:left_knee|Knight_2:left_ankle.translateY" 
+		"|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:left_hip|Knight_2:left_knee|Knight_2:effector2.translateY" 
 		""
-		3 "|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:spine_1|Knight_2:spine_2|Knight_2:spine_3|Knight_2:spine_4|Knight_2:neck_base|Knight_2:right_shoulder_pauldron_1|Knight_2:right_elbow|Knight_2:right_wrist.translateZ" 
-		"|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:spine_1|Knight_2:spine_2|Knight_2:spine_3|Knight_2:spine_4|Knight_2:neck_base|Knight_2:right_shoulder_pauldron_1|Knight_2:right_elbow|Knight_2:effector4.translateZ" 
+		3 "|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:left_hip|Knight_2:left_knee|Knight_2:left_ankle.translateZ" 
+		"|Knight_2:root|Knight_2:Cog|Knight_2:hip_center|Knight_2:left_hip|Knight_2:left_knee|Knight_2:effector2.translateZ" 
 		""
 		5 3 "Knight_2RN" "|Knight_2:pPlane1.message" "Knight_2RN.placeHolderList[3037]" 
 		""
@@ -3803,8 +3803,8 @@ createNode animCurveTL -n "left_hand_translateZ";
 	rename -uid "5A3F86EC-4E12-97B4-FB9B-6CB2725A730C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 7.0279906510074064e-17 47 -0.2 274 -0.2
-		 275 0;
+	setAttr -s 4 ".ktv[0:3]"  0 7.0279906510074064e-17 47 -0.24354838709677418
+		 274 -0.30161290322580647 275 0;
 	setAttr -s 4 ".kit[2:3]"  1 1;
 	setAttr -s 4 ".kot[2:3]"  1 1;
 	setAttr -s 4 ".kix[2:3]"  1 1;
@@ -4811,7 +4811,7 @@ createNode animCurveTA -n "helm_plate_rotateZ";
 	setAttr -s 26 ".ktv[0:25]"  0 0 16 0 18 1.4507824521253574 23 -1.7052721184271629
 		 26 1.1228806785614625 30 0 77 0 80 6.6283593708750885 86 0 92 4.3433313818728623
 		 96 0 128 0 131 3.0759599738652219 137 0 155 0 158 -3.076 164 0 174 0 177 3.0759599738652219
-		 183 0 212 0 215 -1.6529168841214037 221 0 256 0 259 -4.847962496304965 265 0;
+		 183 0 212 0 215 -1.6529168841214039 221 0 256 0 259 -4.847962496304965 265 0;
 	setAttr -s 26 ".kit[0:25]"  18 18 18 18 18 1 1 18 
 		1 1 1 1 18 1 1 18 1 1 18 1 1 18 1 1 18 
 		1;
@@ -6343,7 +6343,6 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "Knight_2RN.phl[3037]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[16].dn"
 		;
 connectAttr "Knight_2RN.phl[3038]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[27].dn"
